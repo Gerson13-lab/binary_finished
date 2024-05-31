@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decimal to Binary Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <center><h1>Decimal to Binary Converter</h1></center>
+        <form method="post">
+           <center><label for="decimal_number">Enter a Decimal Number:</label></center>
+            <input type="text" id="decimal_number" name="decimal_number" required value="{{ user_num }}" class="input-align">
+            <center><button type="submit">Convert</button></center>
+        </form>
+        {% if binary_result %}
+            <center><div class="result"></center>
+                <center><h2>Binary Result:</h2></center>
+                <p>{{ binary_result }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
